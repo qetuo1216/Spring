@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	window.onload = function() {
+		var countButton = document.getElementById("count-button");
+		var countLabel = document.getElementById("count-label");
+		var timer
+		countButton.onclick =function() {
+			/* countLabel.textContent-=1; */
+			setInterval(function{
+			countLabel.textContent = parseInt(countLabel.textContent)-1;
+			},1000};
+			
+		};
+		
+	};
+</script>
+</head>
+<body>
+	<p>
+		남은시간 <span id="count-label">60</span>초 <input id="count-button"
+			type="button" value="카운트 시작" />
+	</p>
+	
+
+
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	window.onload = function() {
+		
+		
+		var ex = document.getElementById("ex");
+		var countLabel = document.getElementById("count-label");
+		var countLabel = document.getElementById("count-label");
+		var countButton = document.getElementById("count-button");
+		var timerId = null;
+				
+		ex.style.marginTop = "0px";
+		countButton.onclick =function() {
+			
+			
+			
+			if(timerId == null)
+				timerId = setInterval(function(){
+					
+					var count = parseInt(countLabel.textContent);
+					if(count <=0){
+					clearInterval(timeId);
+					timerId=null;
+					}
+					
+				countLabel.textContent = count-1;
+				},1000);						
+		
+		};
+		
+		
+		
+	};
+
+		
+	
+</script>
+</head>
+<body>
+
+	<div id="ex">
+	<p>
+		남은시간 <span id="count-label">60</span>초 <input id="count-button"
+			type="button" value="카운트 시작" />
+	</p></div>
+</body>
+</html>
